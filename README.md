@@ -1,7 +1,7 @@
 # NetflixClone
 
 <p align="center">
-    <img src="docs/app_demo.png" height=600>
+    <img src="docs/app_demo.png" height="600">
 </p>
 
 ## What is it?
@@ -58,4 +58,4 @@
 
 ## License
 
-- Copyright 2021 © <a href="" target="_blank">Lucas Pedrosa Ribeiro</a>.
+- Copyright 2021 © <a href="https://github.com/Ridenn" target="_blank">Lucas Pedrosa Ribeiro</a>.
