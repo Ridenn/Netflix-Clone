@@ -22,7 +22,7 @@
 
 ## Setup
 
-- ASll the necessary `code` to begin
+- All the necessary `code` to begin
 
 ### Build Instructions
 
