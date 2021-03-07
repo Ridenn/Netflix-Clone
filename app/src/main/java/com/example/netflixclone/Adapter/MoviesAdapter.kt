@@ -26,7 +26,7 @@ class MoviesAdapter() : RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: ListMoviesBinding, val onItemClickListener: (Movie) -> Unit) : RecyclerView.ViewHolder(binding.root){
         fun bind(movie: Movie) {
             val movieCover = movie.movieCover
-            if(!movieCover.isNullOrEmpty()){
+            if(!movieCover.equals("null") && !movieCover.isNullOrEmpty()){
                 Picasso.get().load(movie.movieCover).fit().into(binding.movieCover)
             }
             binding.root.setOnClickListener {

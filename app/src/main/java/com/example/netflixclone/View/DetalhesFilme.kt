@@ -79,7 +79,7 @@ class DetalhesFilme : AppCompatActivity() {
 
     private fun populateMovieDetails(movie: Movie?) {
         val moviePlayerCover = movie?.moviePlayerCover
-        if(!moviePlayerCover.equals("null")){
+        if(!moviePlayerCover.equals("null") && !moviePlayerCover.isNullOrEmpty()){
             Picasso.get().load(moviePlayerCover).fit().into(binding.cover)
         }
 
