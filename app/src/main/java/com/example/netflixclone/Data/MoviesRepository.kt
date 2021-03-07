@@ -21,7 +21,7 @@ class MoviesRepository {
                             movieCover = it.get("movie_cover").toString(),
                             name = it.get("name").toString(),
                             description = it.get("description").toString(),
-                            cast = it.get("cast").toString(),
+                            cast = it.get("cast").toString().replace("\\n", "\n"),
                             moviePlayerCover = it.get("movie_player_cover").toString(),
                             movieVideo = it.get("movie_video").toString()
                         )

@@ -77,8 +77,10 @@ class DetalhesFilme : AppCompatActivity() {
     }
 
     private fun populateMovieDetails(movie: Movie?) {
-        val coverTheWitcher = movie?.moviePlayerCover
-        Picasso.get().load(coverTheWitcher).fit().into(binding.cover)
+        val moviePlayerCover = movie?.moviePlayerCover
+        if(!moviePlayerCover.equals("null")){
+            Picasso.get().load(moviePlayerCover).fit().into(binding.cover)
+        }
 
         binding.txtTitle.text = movie?.name
         binding.txtDescription.text = movie?.description
