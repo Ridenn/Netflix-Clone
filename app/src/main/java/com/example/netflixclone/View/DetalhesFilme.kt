@@ -2,6 +2,7 @@ package com.example.netflixclone.View
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.netflixclone.Adapter.MoviesAdapter
 import com.example.netflixclone.Model.Movie
@@ -88,9 +89,13 @@ class DetalhesFilme : AppCompatActivity() {
     }
 
     private fun startVideo(movie: Movie?) {
-        val intent = Intent(this, Video::class.java)
-        intent.putExtra(Movie.EXTRA_KEY, movie)
-        startActivity(intent)
+        if(movie?.movieVideo.isNullOrEmpty()){
+            Toast.makeText(this, "Ainda não há nenhum vídeo para assistir, volte mais tarde!", Toast.LENGTH_SHORT).show()
+        }else{
+            val intent = Intent(this, Video::class.java)
+            intent.putExtra(Movie.EXTRA_KEY, movie)
+            startActivity(intent)
+        }
     }
 
     private fun setupToolbar(){
