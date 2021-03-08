@@ -54,6 +54,9 @@
 
 - Kotlin
 - Koin
+- Retrofit 2
+- Picasso lib
+- ExoPlayer lib
 - Firebase (Firestore and Authentication)
 
 ## License
